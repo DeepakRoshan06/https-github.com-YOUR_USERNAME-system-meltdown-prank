@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Sign In</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container" id="main-container">
+        <div class="form-container" id="signin-form">
+            <h2>Welcome Back</h2>
+            <p class="subtitle">Enter your credentials to access your account.</p>
+            <form onsubmit="handleLogin(event)">
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="name@example.com">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="Enter your password">
+                </div>
+                <button type="submit" class="primary-btn">Sign In</button>
+            </form>
+            <p class="switch-text">Don't have an account? <a href="#" onclick="toggleForm()">Sign Up</a></p>
+        </div>
+
+        <div class="form-container hidden" id="signup-form">
+            <h2>Create Account</h2>
+            <p class="subtitle">Join us today for exclusive access.</p>
+            <form onsubmit="handleLogin(event)">
+                <div class="input-group">
+                    <label for="new-email">Email Address</label>
+                    <input type="email" id="new-email" required placeholder="name@example.com">
+                </div>
+                <div class="input-group">
+                    <label for="new-password">Password</label>
+                    <input type="password" id="new-password" required placeholder="Create a password">
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" required placeholder="Confirm your password">
+                </div>
+                <button type="submit" class="primary-btn">Sign Up</button>
+            </form>
+            <p class="switch-text">Already have an account? <a href="#" onclick="toggleForm()">Sign In</a></p>
+        </div>
+    </div>
+
+    <div id="prank-message" class="hidden">
+        <h1>APRIL FOOL!</h1>
+    </div>
+
+    <div id="terminal-overlay" class="hidden">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <span class="red-dot"></span>
+                <span class="yellow-dot"></span>
+                <span class="green-dot"></span>
+                <span class="terminal-title">SYSTEM_ROOT_ACCESS</span>
+            </div>
+            <div class="terminal-body" id="terminal-content">
+                <!-- Logs will appear here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
